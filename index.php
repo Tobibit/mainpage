@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Main page</title>
 </head>
 <body>
@@ -14,12 +15,14 @@
         $folders = scandir($directory);
 
         // iterate through each folder to create links to their index.html file
+        echo "<div class='button-container'>";
         foreach($folders as $folder) {
-            if($folder !== '.' && $folder !== '..' && is_dir($directory . $folder)){
+            if($folder !== '.' && $folder !== '..' && is_dir($directory . $folder) && $folder !== '.git'){
                 $link = $directory . $folder . '/index.html';
-                echo "<a href='$link'>$folder</a><br><br>";
+                echo "<a class='buttonRed' href='$link'>$folder</a><br><br>";
             }
         }
+        echo "</div>";
     ?>
 </body>
 </html>
