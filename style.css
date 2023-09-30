@@ -2,23 +2,59 @@
     background-color: #A0A0A0;
 }
 
+/* button */
 .button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 10px;
 }
 
-.buttonRed {
+.button {
     padding: 100px 200px;
     font-size: 100px;
-    background-color: rgba(17, 17, 17, 0.9);
-    color: red;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     overflow: hidden;
-    box-shadow: 20px 20px 75px red;
+    box-shadow: 20px 20px 75px;
+    margin: 10px;
 }
 
+/* on click */
+.button:active {
+    transform: translate(10px, 10px);
+}
+
+/* colors */
+.buttonRed {
+    background-color: rgba(17, 17, 17, 0.9);
+    color: red;
+}
+
+.buttonBlue {
+    background-color: lightblue;
+    color: rgba(0, 0, 139, 0.9);
+}
+
+.buttonYellow {
+    background-color: yellow;
+    color: rgb(153, 153, 0);
+}
+
+.buttonPurple {
+    background-color: purple;
+    color: rgb(85, 0, 85)
+}
+
+.buttonGreen {
+    background-color: green;
+    color: rgb(0, 85, 0);
+}
+
+.buttonOrange {
+    background-color: orange;
+    color: rgb(255, 128, 0);
+}

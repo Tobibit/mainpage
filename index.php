@@ -8,6 +8,9 @@
 </head>
 <body>
     <?php
+        // give button a random color
+        $colors = ["Red", "Blue", "Yellow", "Purple", "Green", "Orange"];
+
         // define the directory where your projects are located
         $directory = './';
 
@@ -18,8 +21,13 @@
         echo "<div class='button-container'>";
         foreach($folders as $folder) {
             if($folder !== '.' && $folder !== '..' && is_dir($directory . $folder) && $folder !== '.git'){
+                $color = $colors[array_rand($colors)];
                 $link = $directory . $folder . '/index.html';
-                echo "<a class='buttonRed' href='$link'>$folder</a><br><br>";
+                echo "
+                <a href='$link'>
+                    <button class='button button$color'>$folder</button>
+                </a><br><br>
+                ";
             }
         }
         echo "</div>";
