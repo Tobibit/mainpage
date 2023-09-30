@@ -9,7 +9,7 @@
 <body>
     <?php
         // give button a random color
-        $colors = ["Red", "Blue", "Yellow", "Purple", "Green", "Orange"];
+        $colors = ["Red", "Blue", "Yellow", "Purple", "Green", "Orange", "Brown"];
 
         // define the directory where your projects are located
         $directory = './';
@@ -25,7 +25,7 @@
                 $link = $directory . $folder . '/index.html';
                 echo "
                 <a href='$link'>
-                    <button class='button button$color'>$folder</button>
+                    <button class='button button$color neon-text'>$folder</button>
                 </a><br><br>
                 ";
             }
