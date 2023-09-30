@@ -76,3 +76,26 @@ body {
 .neon-text:hover {
     text-shadow: 0 0 30px white;
 }
+
+/* Error text */
+.error-container {
+    background-color: #fff; /* Container background color */
+    border: 1px solid #ccc; /* Container border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for the container */
+    max-width: 500px;
+    margin: 100px auto; /* Center the container vertically */
+    padding: 20px;
+}
+
+h1 {
+    color: #e74c3c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}

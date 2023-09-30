@@ -22,7 +22,18 @@
         foreach($folders as $folder) {
             if($folder !== '.' && $folder !== '..' && is_dir($directory . $folder) && $folder !== '.git'){
                 $color = $colors[array_rand($colors)];
-                $link = $directory . $folder . '/index.html';
+                
+                // check if index.html or index.php exists
+                if(file_exists($directory . $folder . '/index.html')){
+                    $link = $directory . $folder . '/index.html';
+                } 
+                else if(file_exists($directory . $folder . '/index.php')){
+                    $link = $directory . $folder . '/index.php';
+                }
+                else {
+                    $link = "no_directory.html";
+                }
+
                 echo "
                 <a href='$link'>
                     <button class='button button$color neon-text'>$folder</button>
